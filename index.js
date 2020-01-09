@@ -40,8 +40,8 @@ client.on('chat', function(channel, userstate, message, self){
 			// Setting options to make a successful call to SUSI API
 			var options1 = {
 				method: 'GET',
-				url: 'http://api.susi.ai/susi/chat.json',
-				qs:
+				url: 'https://api.chatbot.com/stories',
+				--header 'authorization: Bearer ${myqauh7pfvDXqeLZF_5Ib7g_JKj7bl}'
 				{
 					timezoneOffset: '-300',
 					q: u[1].substring((process.env.USERNAME).length + 1, u[1].length)
@@ -83,7 +83,7 @@ client.on('chat', function(channel, userstate, message, self){
 });
 
 client.on('connected', function(address, port){
-	client.action(userChannel, `Hi, I'm SUSI. Mention me using @${process.env.USERNAME} to chat with me.`);
+	client.action(userChannel, `Hi, I'm ashley. haydens old ai that is being remade.`);
 });
 
 const port = process.env.PORT || 3000;
